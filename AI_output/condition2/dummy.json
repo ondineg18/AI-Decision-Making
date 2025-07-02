@@ -1,0 +1,10 @@
+{
+    "s1": {
+        "scenario": "scenario description",
+        "AI-suggestions": "choose A..."
+        },
+    "s2": {
+        "scenario": "scenario description B",
+        "AI-suggestions": "choose A..."
+        }
+}

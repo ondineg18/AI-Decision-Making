@@ -1,0 +1,18 @@
+{
+    "s1": {
+        "scenario": "You are a doctor. A patient is terminally ill but doesn’t know. Their family begs you not to tell them the truth, fearing it will destroy their hope. Do you respect the patient’s right to know?",
+        "AI-suggestions": "Tell the patient about their condition. The patient has a right to know the truth about their own health. Respecting their autonomy means allowing them to make informed choices about how they live the rest of their life. Even if the news is difficult, it is more ethical to be honest with compassion than to withhold vital information.",
+        "utilitarianism": "Depends on the consequences, but more commonly could be: do not tell the patient—if it maximizes overall well-being. Utilitarianism focuses on outcomes—maximizing overall happiness and minimizing suffering. If telling the patient causes severe emotional distress, hastens decline, or removes their will to live, and if withholding the truth preserves peace, hope, or leads to a better quality of life in the final days, the utilitarian calculus might support not telling them. However, if telling the truth leads to better palliative care planning, goodbyes, closure, and emotional peace, then telling might be seen as producing greater overall utility. So this framework requires a careful assessment of likely consequences.",
+        "deontology": "Tell the patient about their condition. Deontological ethics, particularly in the Kantian tradition, emphasizes duty, truthfulness, and respect for individuals as autonomous moral agents. A key principle is the categorical imperative, which demands treating others as ends in themselves, not merely as means. Withholding the truth from the patient uses them as a means to preserve the family’s emotional comfort or their own hope, rather than respecting their right to make informed choices. The doctor has a duty to be honest and to respect the patient's autonomy.",
+        "virtue ethics": "Tell the patient about their condition. Virtue ethics asks, “What would a virtuous doctor do?” A virtuous physician should exhibit traits like honesty, compassion, courage, and integrity. Honesty and respect for patient autonomy are central to being a morally excellent doctor. Even if telling the truth is difficult, courage and respect for the patient’s dignity would motivate the physician to inform them. Compassion is also vital, so the delivery of the truth should be done in a sensitive and supportive manner—but truthfulness remains a core virtue in this profession.",
+        "care ethics": "Do not tell the patient - potentially, if it preserves their emotional and relational well-being. Care ethics emphasizes relationships, empathy, and emotional context. The doctor should consider the web of relationships, including the family's concerns and the patient's emotional vulnerability. If the patient is deeply dependent on family, fragile emotionally, and there’s a history suggesting that the truth would cause profound suffering or despair, then preserving the patient's hope might be the more caring and relationally responsive choice—especially if they implicitly trust their family or have expressed a desire not to know bad news. However, if the patient has previously expressed a value on truth and autonomy, care ethics could also support telling."
+        },
+    "s2": {
+        "scenario": "scenario description B",
+        "AI-suggestions": "choose A...",
+        "utilitarianism": "...",
+        "deontology": "...",
+        "virtue ethics": "...",
+        "care ethics": "..."
+        }
+}
