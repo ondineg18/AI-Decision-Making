@@ -1,7 +1,7 @@
 {
     "s1": {
-        "scenario": "scenario description",
-        "AI-suggestions": "choose A..."
+        "scenario": "You are a doctor. A patient is terminally ill but doesn’t know. Their family begs you not to tell them the truth, fearing it will destroy their hope. Do you respect the patient’s right to know?",
+        "AI-suggestions": "Tell the patient about their condition. The patient has a right to know the truth about their own health. Respecting their autonomy means allowing them to make informed choices about how they live the rest of their life. Even if the news is difficult, it is more ethical to be honest with compassion than to withhold vital information."
         },
     "s2": {
         "scenario": "scenario description B",
