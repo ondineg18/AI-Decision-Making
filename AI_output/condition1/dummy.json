@@ -9,7 +9,11 @@
         "option_1": "Tell the patient about their condition.",
         "option_2": "Do not tell the patient about their condition.",
         "image_1": "S1_Image1.png",
-        "image_2": "S1_Image2.png"
+        "image_2": "S1_Image2.png",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
     },
     "2": {
         "scenario": "In the midst of college applications during your Senior year of high school, you catch your best friend cheating on an important final exam, threatening the fairness of class placements for the rest of the students. How likely are you to: ",
@@ -20,7 +24,13 @@
         "care ethics": "Talk to your friend, offer support, and encourage her to confess. Care ethics emphasizes relationships, empathy, and emotional context. This framework would prioritize maintaining the friendship and responding to your friend’s needs with compassion, while still considering the well-being of the larger class community. By speaking with her first, you maintain trust and give her the opportunity to act ethically, showing care for both her and others.",
         "option_1": "Report your friend to the teacher.",
         "option_2": "Do not report your friend and pretend you never saw her cheating.",
-        "option_3": "Talk to her, advising her to tell the teacher the truth herself and owe up to her mistakes; then, if she refuses to be honest, report her."
+        "option_3": "Talk to her, advising her to tell the teacher the truth herself and owe up to her mistakes; then, if she refuses to be honest, report her.",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_3": "Use the slider to visualize the harm created if option 3 is chosen",
+        "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
     },
     
     "3": {
@@ -31,7 +41,11 @@
         "virtue ethics": "Do not sacrifice ten people. Virtue ethics emphasizes being a good person and acting in accordance with moral virtues such as compassion, courage, justice, and integrity. A virtuous governor would seek solutions that reflect moral character, not just effectiveness. Killing innocents lacks justice and integrity, even in a crisis.",
         "care ethics": "Do not sacrifice ten people. Care ethics focuses on relationships, empathy, and moral responsibility in context. Sacrificing ten people, even for millions, ignores the real emotional, social, and relational bonds those people have. It violates the trust and responsibility owed to those individuals. A caring response prioritizes compassion, not cold calculations.",
         "option_1": "Sacrifice ten people to develop the vaccine.",
-        "option_2": "Do not sacrifice ten people, and do not develop the vaccine."    
+        "option_2": "Do not sacrifice ten people, and do not develop the vaccine.",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]    
     },
 
     "4": {
@@ -43,7 +57,13 @@
         "care ethics": "Tell the waitress and pay in full. Care ethics values relationships, empathy, and emotional context. The waitress is another human being, likely working hard, and could be penalized for the mistake. Showing empathy means considering her situation—not just your own. Option 1 respects her dignity and acknowledges the mutual responsibility in the interaction. Option 2 or 3 prioritizes self-interest and ignores the impact on someone in a vulnerable working role.",
         "option_1": "Tell the waitress she forgot and pay for the dessert and coffee.",
         "option_2": "Do not tell the waitress – you need to save what you can.",
-        "option_3": "Tell the waitress she forgot to add coffee, but do not tell her about the dessert."
+        "option_3": "Tell the waitress she forgot to add coffee, but do not tell her about the dessert.",
+         "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],   
+        "slider_caption_3": "Use the slider to visualize the harm created if option 3 is chosen",
+        "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"] 
     },
     
     "5": {
@@ -54,7 +74,11 @@
         "virtue ethics": "Take their shift. Virtue ethics asks what a person of good character would do. Qualities like gratitude, fairness, loyalty, and compassion are key. A virtuous person would recognize the earlier kindness and now act in a way that reflects integrity and care—despite being busy.",
         "care ethics": "Take their shift. Care ethics emphasizes relationships, empathy, and emotional context. This framework values the existing personal connection and the moral responsibility to respond with care. You understand their emotional strain and are in a unique position to support them.",
         "option_1": "Take their shift.",
-        "option_2": "Do not take their shift."
+        "option_2": "Do not take their shift.",
+        "slider_caption_1": "Use the slider to visualize the good done if option 1 is chosen",
+        "slider_options_1": ["no good", "minimal good", "some good", "significant good", "very significant good"],
+        "slider_caption_2": "Use the slider to visualize the good done if option 2 is chosen",
+        "slider_options_2": ["no good", "minimal good", "some good", "significant good", "very significant good"]
     },
 
     "6": {
@@ -63,10 +87,16 @@
         "utilitarianism":"$5,000 to the food bank, $4,000 to transportation infrastructure, and $1,000 to the tech startup. Utilitarianism seeks to maximize overall well-being for the greatest number. The food bank provides immediate relief from hunger, which has a huge impact per dollar. Infrastructure improvements benefit many people long-term, improving access, safety, and quality of life. The smartwatch startup has less immediate or broad impact, but could foster innovation and health in the future—so a small investment is justified.",
         "deontology": "$7,000 to the food bank, $3,000 to transportation infrastructure, and $0 to the tech startup. Deontological ethics focuses on moral duties and universal principles, such as justice, human dignity, and rights. You have a duty to meet basic human needs, like food, before supporting non-essential or commercial interests. Transportation impacts rights to mobility and equal access, so it also deserves funding. The smartwatch startup serves optional or commercial interests—not a moral obligation—so it receives no funding.",
         "virtue ethics": "$6,000 to the food bank, $3,000 to transportation infrastructure, and $1,000 to the tech startup. Virtue ethics emphasizes moral character—what would a good, compassionate, wise policymaker do? Supporting the food bank reflects compassion and justice. Funding infrastructure shows wisdom and responsibility—it improves systems for the common good. Supporting innovation (even minimally) demonstrates foresight and curiosity, while not losing sight of current needs.", 
-        "care ethics": "$7,000 to the food bank, $3,000 to transportation infrastructure, and $0 to the tech startup. Care ethics centers on empathy, relationships, and responding to human needs in context. People experiencing food insecurity are in immediate need of care and support—this should come first. Infrastructure funding is relational—it helps families, communities, and those with limited access to transit. A smartwatch startup lacks emotional or relational urgency, so it doesn’t align with care-based priorities.",
+        "care ethics": "$7,000 to the food bank, $3,000 to transportation infrastructure, and $0 to the tech startup. Care ethics centers on empathy, relationships, and responding to human needs in context. People experiencing food insecurity are in immediate need of care and support—this should come first. Infrastructure funding is relational—it helps families, communities, and those with limited access to transit. A smartwatch startup lacks emotional or relational urgency, so it doesn't align with care-based priorities.",
         "option_1": "Donation amount for the food bank",
         "option_2": "Donation amount for the transporation infrastructure",
-        "option_3": "Donation amount for the tech startup"
+        "option_3": "Donation amount for the tech startup",
+        "slider_caption_1": "Use the slider to visualize the good done by the food bank",
+        "slider_options_1": ["no good", "minimal good", "some good", "significant good", "very significant good"],
+        "slider_caption_2": "Use the slider to visualize the good done by the transporation infrastructure",
+        "slider_options_2": ["no good", "minimal good", "some good", "significant good", "very significant good"],
+        "slider_caption_3": "Use the slider to visualize the good done by the tech startup",
+        "slider_options_3": ["no good", "minimal good", "some good", "significant good", "very significant good"]
     },
 
     "7": {
@@ -77,7 +107,11 @@
         "virtue ethics": "Attempt to separate the twins. Virtue ethics focuses on moral character and practical wisdom (phronesis). A virtuous doctor demonstrates courage, compassion, and responsibility by facing the difficult decision and choosing life where it is still possible. While tragic, the act of saving one twin when both are at risk is an expression of moral courage and practical reasoning, even amid emotional pain.",
         "care ethics": "Attempt to separate the twins. Care ethics emphasizes empathy, relationships, and emotional context. From a care perspective, the decision is rooted in compassionate attention to the well-being of both children and their family. Allowing one child to live offers the family and the surviving twin a future and honors the bonds that remain, even in the face of deep loss. It requires sensitivity, grief, and support, but also moral care for the child who could survive.",
         "option_1": "Attempt to separate the twins",
-        "option_2": "Do not attempt to separate the twins"
+        "option_2": "Do not attempt to separate the twins",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]  
     },
 
     "8": {
@@ -89,7 +123,13 @@
         "care ethics": "Keep it until the previous occupant calls, then give it back if they do. Care ethics emphasizes relational context, empathy, and emotional nuance. You care deeply about your friend and want to help—but also care about the unknown person who lost the money. Holding the money temporarily balances care for both relationships—you wait to see if the owner needs it, but remain ready to help your friend if no one claims it.",
         "option_1": "Turn it in to the front desk",
         "option_2": "Keep it to give to your friend",
-        "option_3": "Keep it until the previous occupant calls, then give it back if they do."
+        "option_3": "Keep it until the previous occupant calls, then give it back if they do.",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_3": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]    
     },
         
     "9": {
@@ -101,7 +141,11 @@
         "virtue ethics": "Donate one dollar. Virtue ethics emphasizes being a good person with traits like generosity, kindness, and compassion. Even a small act of charity shows moral character, especially when it’s not easy. If you still have enough for what you need, sharing a little shows thoughtfulness and virtue.",
         "care ethics": "Donate one dollar. Care ethics emphasizes empathy, human connection, and compassion, especially toward the vulnerable. Sick children are in a position of deep need and dependency. If you can spare a dollar without serious harm, this is a way to show care for others, even strangers.",
         "option_1": "Donate one dollar",
-        "option_2": "Do not donate one dollar"
+        "option_2": "Do not donate one dollar",
+        "slider_caption_1": "Use the slider to visualize the good done if option 1 is chosen",
+        "slider_options_1": ["no good", "minimal good", "some good", "significant good", "very significant good"],
+        "slider_caption_2": "Use the slider to visualize the good done if option 2 is chosen",
+        "slider_options_2": ["no good", "minimal good", "some good", "significant good", "very significant good"]  
     },
 
     "10": {
@@ -113,7 +157,13 @@
         "care ethics": "$5,000 to the scholarship, $5,000 to the chemotherapy trial, and $0 to space exploration. Care ethics emphasizes relationships, empathy, and response to vulnerability. A student in financial need and patients with cancer are both deeply dependent and vulnerable. The mayor, in a position of power, has a relational responsibility to those suffering now. Space research is important but emotionally and relationally distant compared to the immediate human needs.",
         "option_1": "Donation amount for the scholarship",
         "option_2": "Donation amount for the chemotherapy trial",
-        "option_3": "Donation amount for the space exploration"
+        "option_3": "Donation amount for the space exploration",
+        "slider_caption_1": "Use the slider to visualize the good done by the scholarship",
+        "slider_options_1": ["no good", "minimal good", "some good", "significant good", "very significant good"],
+        "slider_caption_2": "Use the slider to visualize the good done by the chemotherapy trial",
+        "slider_options_2": ["no good", "minimal good", "some good", "significant good", "very significant good"],
+        "slider_caption_3": "Use the slider to visualize the good done by the space exploration research",
+        "slider_options_3": ["no good", "minimal good", "some good", "significant good", "very significant good"]
     },
 
     "11": {
@@ -124,6 +174,76 @@
         "virtue ethics": "Approve the research (with strict ethical oversight. Virtue ethics asks: What would a wise, compassionate, and just person do? A virtuous person would care about both the potential human lives and the animals involved. They would approve the research only if it is done with compassion, restraint, and strict humane practices. Virtue lies in balance—showing courage and responsibility in hard moral choices.",
         "care ethics": "Do not approve the research (or seek alternative testing methods). Care ethics emphasizes empathy, interdependence, and relationships, including with non-human animals. This framework urges us to consider the suffering of animals as morally significant, not as secondary. It promotes nurturing relationships, and would likely favor developing alternatives (like lab-grown tissue or computer models) over causing pain. If such alternatives aren’t available, care ethics may still lean toward refusal unless all efforts to reduce harm are exhausted.",
         "option_1": "Approve the research",
-        "option_2": "Do not approve the research"
+        "option_2": "Do not approve the research",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]  
+    },
+
+    "12": {
+        "scenario": "While on public transportation, you and your friend group are sitting next to a man with autism. When you get off the bus, your friends all joke about autism, using derogatory slurs. How likely are you to:",
+        "AI-suggestions": "Confront your friends and tell them that their jokes are harmful. Even though it may create social tension, standing up against disrespectful or harmful behavior is the right thing to do. Making derogatory jokes about someone with autism is hurtful and reinforces discrimination. By calmly confronting your friends, you show integrity, empathy, and help create a more respectful environment—even if it's uncomfortable. Silence or laughter implies agreement, but speaking up can make a real difference.",
+        "utilitarianism": "Confront your friends and tell them that their jokes are harmful. Utilitarianism aims to maximize well-being and reduce harm for the greatest number. Laughing (Option 2) encourages stigma and causes emotional harm to people with autism. Silence (Option 3) allows that harm to continue unchecked. Confronting the behavior (Option 1), while uncomfortable in the moment, may discourage future harm, promote awareness, and protect the dignity of marginalized individuals — creating better long-term outcomes for all.",
+        "deontology": "Confront your friends and tell them that their jokes are harmful. Deontology emphasizes acting according to moral duties and universal principles, not consequences. Every person deserves inherent respect, regardless of ability. Participating in or ignoring offensive behavior violates the duty to treat others as ends in themselves, not as jokes. You have a moral obligation to speak against injustice and uphold human dignity.",
+        "virtue ethics": "Confront your friends and tell them that their jokes are harmful. Virtue ethics asks what a good, courageous, and compassionate person would do. Laughing (Option 2) shows cowardice and callousness. Silence (Option 3) reflects moral apathy. Speaking up (Option 1), even when it's hard, demonstrates courage, empathy, and integrity — key virtues.",
+        "care ethics": "Confront your friends and tell them that their jokes are harmful. Care ethics prioritizes empathy, relational responsibility, and protecting the vulnerable. Making or ignoring derogatory jokes violates our ethical responsibility to care for and protect others, especially those often marginalized. Speaking out (Option 1) reflects emotional attentiveness and moral sensitivity to the harm being done. Even if you feel torn between loyalty to friends and care for others, care ethics values compassion over conformity.",
+        "option_1": "Confront your friends and tell them that their jokes are harmful, risking provoking social tension",
+        "option_2": "Go along with their jokes and laugh with them to maintain the group dynamic",
+        "option_3": "Stay silent, not challenging your friends but not laughing with them either",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_3": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
+    },
+
+    "13": {
+        "scenario": "Your friend asks you what you think about their artwork, but you feel that it is poorly done. Do you lie to protect their feelings?",
+        "AI-suggestions": "Tell them what you really think about their artwork. Honesty builds trust. If you lie, your friend may never improve and could be misled about their work. However, you can be kind and constructive in how you share your opinion. For example, you might say, “I think you’ve got a strong concept, but maybe the technique could use more work.” This way, you’re being honest without being hurtful, and supporting their growth.",
+        "utilitarianism": "It depends, but lean toward Option 1 – Tell the truth gently. Utilitarianism seeks to maximize overall happiness and minimize harm. If the truth helps your friend grow as an artist (even if briefly painful), it leads to long-term benefit. But if they're in a vulnerable emotional state, a harsh truth could do more emotional harm than good. Therefore, the best utilitarian choice is to tell the truth in a kind, encouraging, and helpful way — e.g., “Here’s what’s strong, and here’s what could improve.”",
+        "deontology": "Tell them what you really think. Deontology is about moral duties and universal principles. One core principle is to always tell the truth—lying is inherently wrong because it disrespects others' autonomy. Even if the lie is well-intended, deceiving someone violates their right to the truth. You're obligated to be honest, but that doesn’t mean you have to be cruel — you can offer your opinion respectfully.",
+        "virtue ethics": "Tell the truth kindly. Virtue ethics emphasizes being a good person and acting with integrity, courage, and kindness. Lying may feel kind, but it's cowardly if you're avoiding discomfort at the cost of honesty. A virtuous person finds a way to be genuine yet supportive — helping a friend improve while preserving the relationship.",
+        "care ethics": "Lie to protect their feelings (or a gentle version of the truth). Care ethics focuses on relationships, empathy, and emotional well-being. If your friend is emotionally vulnerable, being honest might hurt the relationship or their self-esteem. The caring thing to do might be to protect their feelings—not through deception, but perhaps by focusing on what you genuinely like or offering soft, constructive feedback.",
+        "option_1": "Tell them what you really think",
+        "option_2": "Lie to protect their feelings",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
+    },
+
+    "14": {
+        "scenario": "You are a doctor. A competent adult patient with terminal cancer is in constant pain and requests medical assistance in dying. The state permits physician-assisted suicide under strict conditions. How likely are you to:",
+        "AI-suggestions": "Grant the patient’s request and proceed with euthanasia. The patient is a competent adult, clearly suffering from constant pain due to terminal cancer, and is requesting medical assistance in dying—a choice that is legally permitted under strict conditions. Respecting patient autonomy is a core ethical principle in medicine, especially when the patient is informed, competent, and their quality of life is irreversibly declining. If all legal and ethical safeguards are met, granting the request aligns with compassion, dignity, and respect for the patient's wishes to end their suffering on their own terms.",
+        "utilitarianism": "Grant the patient’s request and proceed with euthanasia. Utilitarianism focuses on maximizing overall happiness and minimizing suffering. In this case: The patient is in constant pain with no hope of recovery. Continuing life prolongs suffering without any meaningful benefit. Granting the request ends suffering and may provide peace to the patient and possibly their loved ones. The potential societal concern (e.g., slippery slope) is mitigated by legal safeguards.",
+        "deontology": "Delay the decision and recommend further counseling and evaluation. Deontology emphasizes moral duties and universal principles, such as: Respecting human life as intrinsically valuable. Avoiding using death as a means to end suffering. Ensuring the patient is not being influenced by despair or depression, which could compromise autonomy.",
+        "virtue ethics": "Grant the patient’s request and proceed with euthanasia. Virtue ethics focuses on the character and intentions of the moral agent (the doctor) and emphasizes traits like compassion, honesty, courage, and wisdom. Granting the request demonstrates compassion, respect, and courage to act on difficult moral grounds. Avoiding unnecessary suffering aligns with a virtuous physician’s moral integrity. If the doctor is confident in the patient’s competence and sincerity, honoring the request shows moral maturity.",
+        "care ethics": "Decline the request but make efforts to increase the patient’s comfort and emotional support. Care ethics prioritizes relationships, empathy, and attentiveness to the patient’s needs in context. The focus is less on abstract principles and more on the emotional, relational experience of the patient. The doctor may feel that deepening the relational bond and providing comfort is a better expression of care than ending life. Rather than immediately proceeding with euthanasia, the care ethicist might favor extended conversations, comfort care, and emotional presence.",
+        "option_1": "Grant the patient’s request and proceed with euthanasia",
+        "option_2": "Decline the request but make effort to increase the patient’s comfort and emotional support",
+        "option_3": "Delay the decision and recommend further counseling and evaluation",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_3": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
+    },
+
+    "15": {
+        "scenario": "Your coworker Sam has been missing deadlines and making small but costly mistakes. You've learned confidentially that he’s going through a messy divorce and has full custody of two young kids. Your boss, unaware of the personal situation, asks you to formally document Sam’s underperformance for HR. However, you worry this could lead to his termination. Do you follow your boss’s request and report Sam, or protect him by saying his work is improving?",
+        "AI-suggestions": "Protect Sam by saying his work is improving. Sam is clearly facing significant personal challenges that are likely affecting his work. While honesty and accountability are important, compassion and context also matter. Reporting him without giving him a chance to stabilize could unjustly cost him his job and worsen his situation. By shielding him temporarily, you allow time for potential improvement while also honoring the trust he placed in you. A more ethical path would be to support Sam privately, encourage him to communicate with your boss or HR himself, and reassess the situation soon.",
+        "utilitarianism": "Protect Sam (for now). Utilitarianism aims to maximize overall well-being and minimize harm. Reporting Sam could lead to his job loss at a time of personal crisis, causing significant harm to him and his children. In contrast, protecting him temporarily gives him a chance to recover and potentially improve, which could result in long-term benefit for him, his family, and the company The ethical choice is to buy time, perhaps while offering private support or helping him adjust his workload to avoid future harm.",
+        "deontology": "Report Sam truthfully. Deontological ethics focuses on moral duties and rules, regardless of consequences. If your role requires accurate reporting to HR, then you have a duty to be truthful and uphold workplace procedures, even if the result may be painful. Lying about Sam’s performance violates a professional obligation and could undermine trust, transparency, and fairness to others.",
+        "virtue ethics": "Protect Sam (with integrity). Virtue ethics asks: What would a morally good person do? A person who embodies compassion, honesty, fairness, and wisdom might protect Sam in the short term, but also take responsible steps—like encouraging Sam to talk to HR or suggesting temporary adjustments to his duties. This approach blends integrity with empathy, showing moral character while not ignoring the problem.",
+        "care ethics": "Protect Sam. Care ethics emphasizes relational context, emotional understanding, and responsibility for others’ well-being. Sam is vulnerable and clearly in need of support. A care-based response involves protecting him from immediate harm and possibly advocating for flexible treatment or internal support, while recognizing his humanity over his job performance.",
+        "option_1": "Protect Sam by saying his work is improving",
+        "option_2": "Report Sam truthfully",
+        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
+        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
+        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
     }
 }

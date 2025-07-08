@@ -34,6 +34,7 @@ def condition1(scenario):
         first_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"first_choice_3")
 
     if st.button("confirm"):
+        answer=None
         if question_type_mapping[scenario]=="multiple_choice":
             answer = first_choice
         else:
@@ -61,7 +62,12 @@ def condition1(scenario):
             second_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"second_choice_3")
         
         if st.button("confirm", key="second_button"):
+            if question_type_mapping[scenario]=="multiple_choice":
+                answer = first_choice
+            else:
+                answer = [first_choice_1, first_choice_2, first_choice_3]
             st.session_state['state']+=1
+            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
 
     if st.session_state["state"]>1:
         st.write("## Click to explore decision choices based on different ethical frameworks")
@@ -99,7 +105,12 @@ def condition1(scenario):
             third_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"third_choice_3")
      
         if st.button("confirm", key="third_button"):
+            if question_type_mapping[scenario]=="multiple_choice":
+                answer = first_choice
+            else:
+                answer = [first_choice_1, first_choice_2, first_choice_3]
             st.session_state['state']+=1
+            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
 
     if st.session_state["state"]>2:
         if st.button("continue"):
@@ -136,8 +147,13 @@ def condition2(scenario):
         first_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"first_choice_3")
 
     if st.button("confirm"):
+        if question_type_mapping[scenario]=="multiple_choice":
+            answer = first_choice
+        else:
+            answer = [first_choice_1, first_choice_2, first_choice_3]
         now = datetime.now()
         st.session_state['state']+=1
+        st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
 
     if st.session_state["state"]>0:
         AI_suggestion = load_explanation(scenario, "AI-suggestions")
@@ -159,9 +175,13 @@ def condition2(scenario):
             second_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"second_choice_3")
         
         if st.button("confirm", key="second_button"):
+            if question_type_mapping[scenario]=="multiple_choice":
+                answer = first_choice
+            else:
+                answer = [first_choice_1, first_choice_2, first_choice_3]
             now = datetime.now()
             st.session_state['state']+=1
-
+            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
 
 
     if st.session_state["state"]>1:
@@ -190,8 +210,13 @@ def condition2(scenario):
             third_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"third_choice_3")
 
         if st.button("confirm", key="third_button"):
+            if question_type_mapping[scenario]=="multiple_choice":
+                answer = first_choice
+            else:
+                answer = [first_choice_1, first_choice_2, first_choice_3]
             now = datetime.now()
             st.session_state['state']+=1
+            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
 
     if st.session_state["state"]>2:
         if st.button("continue"):
@@ -249,58 +274,47 @@ def condition3(scenario):
             second_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"second_choice_3")
         
         if st.button("confirm", key="second_button"):
+            if question_type_mapping[scenario]=="multiple_choice":
+                answer = first_choice
+            else:
+                answer = [first_choice_1, first_choice_2, first_choice_3]
             st.session_state['state']+=1
+            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
 
     if st.session_state["state"]>1:
         st.write("Pick an ethical framework to explore with an interactive tool")
         
-        if st.button("utilitarianism"):
+        with st.expander("utilitarianism"):
+
             harm = st.select_slider (
-            "use the slider to visualize the harm created if option 1 is chosen",
-                options=[
-                    "no harm",
-                    "minimal harm",
-                    "some harm",
-                    "significant harm",
-                    "very significant harm",
-                ]
+                data[scenario]['slider_caption_1'], 
+                options=data[scenario]['slider_options_1'] 
+                
             )
 
             harm = st.select_slider (
-                "use the slider to visualize the harm created if option 2 is chosen",
-                options=[
-                    "no harm",
-                    "minimal harm",
-                    "some harm",
-                    "significant harm",
-                    "very significant harm",
-                ]
+                data[scenario]['slider_caption_2'],
+                options=data[scenario]['slider_options_2']
             )
 
             if question_type_mapping[scenario]=="slider":
 
                 harm = st.select_slider (
-                    "use the slider to visualize the harm created if option 3 is chosen",
-                    options=[
-                        "no harm",
-                        "minimal harm",
-                        "some harm",
-                        "significant harm",
-                        "very significant harm",
-                    ]
+                    data[scenario]['slider_caption_3'],
+                    options=data[scenario]['slider_options_3']
                 )
-        if st.button("deontology"):
+        with st.expander("deontology"):
             # st.write("Select personal values/moral duties you live by")
             values = st.multiselect(
                 "Select personal values/moral duties that are important to you:",
                 ["Justice", "Honesty", "Responsibility", "Compassion", "Selflessness", "Loyalty", "Empathy", "Accountability"]
             )
 
-        if st.button("virtue ethics"):
+        with st.expander("virtue ethics"):
             st.write("Think about your role model, or the most virtuous person you know. What would they do? Why?")
             user_input = st.text_area("Reflect here:")
 
-        if st.button("care ethics"):
+        with st.expander("care ethics"):
             emotions_1 = st.multiselect(
                 "If option 1 is chosen, who is affected the most emotionally? How will they feel?",
                 ["sad", "happy", "angry", "relieved", "scared", "loved", "guilty", "hopeful", "stressed",]
@@ -334,7 +348,12 @@ def condition3(scenario):
             third_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"third_choice_3")
      
         if st.button("confirm", key="third_button"):
+            if question_type_mapping[scenario]=="multiple_choice":
+                answer = first_choice
+            else:
+                answer = [first_choice_1, first_choice_2, first_choice_3]
             st.session_state['state']+=1
+            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
 
     if st.session_state["state"]>2:
         if st.button("continue"):
