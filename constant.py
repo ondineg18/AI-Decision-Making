@@ -9,7 +9,8 @@ question_type_mapping={
     "8": "slider",
     "9": "multiple_choice",
     "10": "slider",
-    "11": "multiple_choice"
+    "11": "multiple_choice",
+    "12": "slider",
 }
 
 participants_order={
