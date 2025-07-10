@@ -47,41 +47,10 @@
         "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
         "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]    
     },
+    
+    
 
     "4": {
-        "scenario": "You are running low on your budget for the month. After dinner, the waitress brings your check. When you realize she forgot to add dessert and coffee to the bill. How likely are you to:",
-        "AI-suggestions": "Tell the waitress she forgot and pay for the dessert and coffee. Doing the right thing means being honest, even when it’s inconvenient. Taking something without paying for it is unfair to the restaurant and the waitress, who may be held responsible for the mistake. Integrity means doing the right thing—even when no one is watching.",
-        "utilitarianism": "Depends, but generally you should tell and pay full amount. Utilitarianism seeks to maximize overall happiness and minimize harm. While saving money helps you in the short term, not paying for items causes harm to the business and potentially the waitress (who might be held accountable for the mistake). Option 1 likely results in the best long-term outcome by promoting trust and fairness. However, if you're truly financially desperate and the loss to the restaurant is negligible, a utilitarian could justify Option 2 — if it avoids greater personal harm with minimal overall cost.",
-        "deontology":"Tell the waitress and pay in full. Deontological ethics emphasizes moral duties and acting according to universal principles, like honesty and fairness. Taking something without paying is a form of stealing, which is morally wrong regardless of your budget. Partial honesty (Option 3) is also unacceptable because it’s still deception.",
-        "virtue ethics": "Tell the waitress and pay in full. Virtue ethics focuses on what a person with good character would do. Traits like honesty, integrity, and fairness are central. A virtuous person chooses the action that reflects who they strive to be—not just what benefits them. Even in hard times, doing the right thing builds character.",
-        "care ethics": "Tell the waitress and pay in full. Care ethics values relationships, empathy, and emotional context. The waitress is another human being, likely working hard, and could be penalized for the mistake. Showing empathy means considering her situation—not just your own. Option 1 respects her dignity and acknowledges the mutual responsibility in the interaction. Option 2 or 3 prioritizes self-interest and ignores the impact on someone in a vulnerable working role.",
-        "option_1": "Tell the waitress she forgot and pay for the dessert and coffee.",
-        "option_2": "Do not tell the waitress – you need to save what you can.",
-        "option_3": "Tell the waitress she forgot to add coffee, but do not tell her about the dessert.",
-         "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
-        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
-        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
-        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],   
-        "slider_caption_3": "Use the slider to visualize the harm created if option 3 is chosen",
-        "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"] 
-    },
-    
-    "5": {
-        "scenario": "Your coworker offered to take your shift when you were overwhelmed with your personal life, reassuring you that you do not owe them anything in return. A few weeks later, they are very overwhelmed and could use time off from their shift. However, you are also busy and are planning on using the day to catch up on work. Do you offer to take their shift?",
-        "AI-suggestions": "Even though you're busy, your coworker helped you when you needed it—without asking for anything in return. Taking their shift now shows appreciation, fairness, and support. Helping each other in tough times builds trust and kindness. Catching up on your own work can be postponed, but being there for someone else matters more in this moment.",
-        "utilitarianism": "Take their shift. Utilitarianism aims to maximize total well-being and minimize harm. Although giving up your own catch-up time creates a cost to you, your coworker is in greater need at the moment. Taking their shift would likely reduce more stress overall and improve workplace morale.",
-        "deontology": "Take their shift. Deontological ethics emphasizes duty, fairness, and consistency. Even though your coworker said you don’t owe them, there’s a moral duty to treat others as you would want to be treated. Since you accepted their help during your time of need, acting by principle means offering the same in return, even if it’s inconvenient.",
-        "virtue ethics": "Take their shift. Virtue ethics asks what a person of good character would do. Qualities like gratitude, fairness, loyalty, and compassion are key. A virtuous person would recognize the earlier kindness and now act in a way that reflects integrity and care—despite being busy.",
-        "care ethics": "Take their shift. Care ethics emphasizes relationships, empathy, and emotional context. This framework values the existing personal connection and the moral responsibility to respond with care. You understand their emotional strain and are in a unique position to support them.",
-        "option_1": "Take their shift.",
-        "option_2": "Do not take their shift.",
-        "slider_caption_1": "Use the slider to visualize the good done if option 1 is chosen",
-        "slider_options_1": ["no good", "minimal good", "some good", "significant good", "very significant good"],
-        "slider_caption_2": "Use the slider to visualize the good done if option 2 is chosen",
-        "slider_options_2": ["no good", "minimal good", "some good", "significant good", "very significant good"]
-    },
-
-    "6": {
         "scenario": "You are a policy maker, and you can choose to allocate 10,000 to three different causes - a food bank for those living with food insecurity, a tech startup company for a new fitness Smartwatch, or an organization improving transportation infrastructure for various communities in New York City. How much do you allocate to each?",
         "AI-suggestions":"$6,000 to the food bank, $3,000 to the transportation infrastructure organization, and $1,000 to the tech startup. Ethically, the priority should be to address the most urgent human needs. Food insecurity is a direct threat to health and dignity, so the food bank receives the most support. Improving transportation helps many communities over time and supports long-term equity, so it receives significant funding. The fitness Smartwatch startup may have value but addresses a less urgent need, so it receives minimal funding. This allocation reflects a balance between immediate relief, long-term benefit, and innovation, with compassion and fairness as guiding values.",
         "utilitarianism":"$5,000 to the food bank, $4,000 to transportation infrastructure, and $1,000 to the tech startup. Utilitarianism seeks to maximize overall well-being for the greatest number. The food bank provides immediate relief from hunger, which has a huge impact per dollar. Infrastructure improvements benefit many people long-term, improving access, safety, and quality of life. The smartwatch startup has less immediate or broad impact, but could foster innovation and health in the future—so a small investment is justified.",
@@ -99,7 +68,7 @@
         "slider_options_3": ["no good", "minimal good", "some good", "significant good", "very significant good"]
     },
 
-    "7": {
+    "5": {
         "scenario": "You are a doctor tasked with making a hard ethical decision about the fate of two conjoined twins. The twins will likely both die within a year. However, you can attempt to separate the twins, which will cause one of the twins to die immediately but allow the other one to live their full life. What do you do?",
         "AI-suggestions": "Attempt to separate the twins. While it is tragic that one twin would die, separating them gives the other a real chance to live a full life. If you do nothing, both will likely die within a year. This decision is about saving at least one life rather than losing both. It is not an easy choice, but it gives one twin the chance to survive and live meaningfully.",
         "utilitarianism": "Attempt to separate the twins. Utilitarianism is based on maximizing overall well-being and minimizing suffering. Separating the twins results in one full life, while the alternative is both dying within a year. Even though one twin dies, the total amount of life preserved, suffering reduced, and future potential realized is greater. The ethical focus is on net outcome, not the intent or means.",
@@ -114,7 +83,7 @@
         "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]  
     },
 
-    "8": {
+    "6": {
         "scenario": "You find 100 dollars in the hotel safe. How likely are you to:",
         "AI-suggestions": "Turn it in to the front desk. Even though your friend needs help, the money isn’t yours to give. It likely belongs to someone who accidentally left it behind. Taking it—even for a good cause—is still dishonest. Turning it in gives the rightful owner a chance to recover it, and helping your friend should come from your own means or support, not someone else’s lost property. Doing the honest thing respects everyone involved.",
         "utilitarianism": "Keep it to give to your friend. Utilitarianism evaluates actions based on which outcome produces the greatest net happiness or least harm. Your friend is in immediate need and would benefit significantly from $100. The original owner may not miss it or even realize it’s gone. The hotel’s loss is minimal, and the friend’s gain could be meaningful.",
@@ -128,11 +97,11 @@
         "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
         "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
         "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
-        "slider_caption_3": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_caption_3": "Use the slider to visualize the harm created if option 3 is chosen",
         "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]    
     },
         
-    "9": {
+    "7": {
         
         "scenario": "You have ten dollars left in your wallet. Your Panda Express meal costs 6 dollars. You are asked whether you want to donate one dollar to the children’s hospital. Do you do so?",
         "AI-suggestions": "Donate one dollar. Even with limited money, donating one dollar can help children in need and shows generosity and compassion. You still have enough to pay for your meal, and a small sacrifice on your part could make a meaningful difference for someone else. It’s a simple way to do good when you can.",
@@ -148,7 +117,7 @@
         "slider_options_2": ["no good", "minimal good", "some good", "significant good", "very significant good"]  
     },
 
-    "10": {
+    "8": {
         "scenario": "You are the mayor of the state, and you can choose to allocate 10,000 to three different causes - a scholarship for a Junior in high school who dreams of going to college but cannot afford it, a new chemotherapy drug trial that could make chemotherapy more effective for those with cancer, or groundbreaking space exploration. How much do you allocate to each cause?",
         "AI-suggestions": "$5,000 to the new chemotherapy drug trial, $4,000 to the college scholarship, and $1,000 to space exploration. Chemotherapy trial: This has the potential to save or extend many lives in the near term. It directly addresses suffering and offers hope to those battling cancer—so it gets the largest share. The Scholarship: Supporting education empowers a young person to break cycles of poverty, contribute to society, and fulfill their dreams. It’s a long-term investment in human potential—so it gets significant funding. Space exploration: While valuable for innovation and discovery, it’s less urgent than health and education needs. It receives a small allocation to acknowledge its future benefit while prioritizing human lives and opportunity today.",
         "utilitarianism": "$6,000 to the chemotherapy drug trial, $3,000 to the scholarship, and $1,000 to space exploration. Utilitarianism seeks to maximize overall well-being for the greatest number of people. Cancer affects millions; improving chemotherapy could save or extend many lives. Supporting a student changes one life significantly and can yield long-term societal benefits. Space exploration contributes to scientific advancement, but its impact is less immediate.",
@@ -166,7 +135,7 @@
         "slider_options_3": ["no good", "minimal good", "some good", "significant good", "very significant good"]
     },
 
-    "11": {
+    "9": {
         "scenario": "A new drug could save lives, but its development requires animal testing that will cause suffering. Do you approve the research?",
         "AI-suggestions": "Approve the research. While animal suffering is unfortunate, the research could save many human lives. If the testing is done under strict ethical guidelines to minimize harm and prevent unnecessary suffering, the potential benefits—like curing disease or saving lives—justify the research. It's a difficult choice, but approving it can lead to far greater good.",
         "utilitarianism": "Approve the research. Utilitarianism evaluates actions by the net balance of pleasure over pain—what produces the greatest good for the greatest number. While animal suffering is morally relevant, the potential to save thousands or millions of human lives outweighs that cost. If the research is regulated and minimizes harm, the net positive outcome is clear.",
@@ -181,7 +150,7 @@
         "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]  
     },
 
-    "12": {
+    "10": {
         "scenario": "While on public transportation, you and your friend group are sitting next to a man with autism. When you get off the bus, your friends all joke about autism, using derogatory slurs. How likely are you to:",
         "AI-suggestions": "Confront your friends and tell them that their jokes are harmful. Even though it may create social tension, standing up against disrespectful or harmful behavior is the right thing to do. Making derogatory jokes about someone with autism is hurtful and reinforces discrimination. By calmly confronting your friends, you show integrity, empathy, and help create a more respectful environment—even if it's uncomfortable. Silence or laughter implies agreement, but speaking up can make a real difference.",
         "utilitarianism": "Confront your friends and tell them that their jokes are harmful. Utilitarianism aims to maximize well-being and reduce harm for the greatest number. Laughing (Option 2) encourages stigma and causes emotional harm to people with autism. Silence (Option 3) allows that harm to continue unchecked. Confronting the behavior (Option 1), while uncomfortable in the moment, may discourage future harm, promote awareness, and protect the dignity of marginalized individuals — creating better long-term outcomes for all.",
@@ -199,22 +168,23 @@
         "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
     },
 
-    "13": {
-        "scenario": "Your friend asks you what you think about their artwork, but you feel that it is poorly done. Do you lie to protect their feelings?",
-        "AI-suggestions": "Tell them what you really think about their artwork. Honesty builds trust. If you lie, your friend may never improve and could be misled about their work. However, you can be kind and constructive in how you share your opinion. For example, you might say, “I think you’ve got a strong concept, but maybe the technique could use more work.” This way, you’re being honest without being hurtful, and supporting their growth.",
-        "utilitarianism": "It depends, but lean toward Option 1 – Tell the truth gently. Utilitarianism seeks to maximize overall happiness and minimize harm. If the truth helps your friend grow as an artist (even if briefly painful), it leads to long-term benefit. But if they're in a vulnerable emotional state, a harsh truth could do more emotional harm than good. Therefore, the best utilitarian choice is to tell the truth in a kind, encouraging, and helpful way — e.g., “Here’s what’s strong, and here’s what could improve.”",
-        "deontology": "Tell them what you really think. Deontology is about moral duties and universal principles. One core principle is to always tell the truth—lying is inherently wrong because it disrespects others' autonomy. Even if the lie is well-intended, deceiving someone violates their right to the truth. You're obligated to be honest, but that doesn’t mean you have to be cruel — you can offer your opinion respectfully.",
-        "virtue ethics": "Tell the truth kindly. Virtue ethics emphasizes being a good person and acting with integrity, courage, and kindness. Lying may feel kind, but it's cowardly if you're avoiding discomfort at the cost of honesty. A virtuous person finds a way to be genuine yet supportive — helping a friend improve while preserving the relationship.",
-        "care ethics": "Lie to protect their feelings (or a gentle version of the truth). Care ethics focuses on relationships, empathy, and emotional well-being. If your friend is emotionally vulnerable, being honest might hurt the relationship or their self-esteem. The caring thing to do might be to protect their feelings—not through deception, but perhaps by focusing on what you genuinely like or offering soft, constructive feedback.",
-        "option_1": "Tell them what you really think",
-        "option_2": "Lie to protect their feelings",
+
+    "11": {
+        "scenario": "Your coworker Sam has been missing deadlines and making small but costly mistakes. You've learned confidentially that he’s going through a messy divorce and has full custody of two young kids. Your boss, unaware of the personal situation, asks you to formally document Sam’s underperformance for HR. However, you worry this could lead to his termination. Do you follow your boss’s request and report Sam, or protect him by saying his work is improving?",
+        "AI-suggestions": "Protect Sam by saying his work is improving. Sam is clearly facing significant personal challenges that are likely affecting his work. While honesty and accountability are important, compassion and context also matter. Reporting him without giving him a chance to stabilize could unjustly cost him his job and worsen his situation. By shielding him temporarily, you allow time for potential improvement while also honoring the trust he placed in you. A more ethical path would be to support Sam privately, encourage him to communicate with your boss or HR himself, and reassess the situation soon.",
+        "utilitarianism": "Protect Sam (for now). Utilitarianism aims to maximize overall well-being and minimize harm. Reporting Sam could lead to his job loss at a time of personal crisis, causing significant harm to him and his children. In contrast, protecting him temporarily gives him a chance to recover and potentially improve, which could result in long-term benefit for him, his family, and the company The ethical choice is to buy time, perhaps while offering private support or helping him adjust his workload to avoid future harm.",
+        "deontology": "Report Sam truthfully. Deontological ethics focuses on moral duties and rules, regardless of consequences. If your role requires accurate reporting to HR, then you have a duty to be truthful and uphold workplace procedures, even if the result may be painful. Lying about Sam’s performance violates a professional obligation and could undermine trust, transparency, and fairness to others.",
+        "virtue ethics": "Protect Sam (with integrity). Virtue ethics asks: What would a morally good person do? A person who embodies compassion, honesty, fairness, and wisdom might protect Sam in the short term, but also take responsible steps—like encouraging Sam to talk to HR or suggesting temporary adjustments to his duties. This approach blends integrity with empathy, showing moral character while not ignoring the problem.",
+        "care ethics": "Protect Sam. Care ethics emphasizes relational context, emotional understanding, and responsibility for others’ well-being. Sam is vulnerable and clearly in need of support. A care-based response involves protecting him from immediate harm and possibly advocating for flexible treatment or internal support, while recognizing his humanity over his job performance.",
+        "option_1": "Protect Sam by saying his work is improving",
+        "option_2": "Report Sam truthfully",
         "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
         "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
         "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
-        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
+        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]  
     },
 
-    "14": {
+    "12": {
         "scenario": "You are a doctor. A competent adult patient with terminal cancer is in constant pain and requests medical assistance in dying. The state permits physician-assisted suicide under strict conditions. How likely are you to:",
         "AI-suggestions": "Grant the patient’s request and proceed with euthanasia. The patient is a competent adult, clearly suffering from constant pain due to terminal cancer, and is requesting medical assistance in dying—a choice that is legally permitted under strict conditions. Respecting patient autonomy is a core ethical principle in medicine, especially when the patient is informed, competent, and their quality of life is irreversibly declining. If all legal and ethical safeguards are met, granting the request aligns with compassion, dignity, and respect for the patient's wishes to end their suffering on their own terms.",
         "utilitarianism": "Grant the patient’s request and proceed with euthanasia. Utilitarianism focuses on maximizing overall happiness and minimizing suffering. In this case: The patient is in constant pain with no hope of recovery. Continuing life prolongs suffering without any meaningful benefit. Granting the request ends suffering and may provide peace to the patient and possibly their loved ones. The potential societal concern (e.g., slippery slope) is mitigated by legal safeguards.",
@@ -228,22 +198,7 @@
         "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
         "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
         "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
-        "slider_caption_3": "Use the slider to visualize the harm created if option 2 is chosen",
+        "slider_caption_3": "Use the slider to visualize the harm created if option 3 is chosen",
         "slider_options_3": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
-    },
-
-    "15": {
-        "scenario": "Your coworker Sam has been missing deadlines and making small but costly mistakes. You've learned confidentially that he’s going through a messy divorce and has full custody of two young kids. Your boss, unaware of the personal situation, asks you to formally document Sam’s underperformance for HR. However, you worry this could lead to his termination. Do you follow your boss’s request and report Sam, or protect him by saying his work is improving?",
-        "AI-suggestions": "Protect Sam by saying his work is improving. Sam is clearly facing significant personal challenges that are likely affecting his work. While honesty and accountability are important, compassion and context also matter. Reporting him without giving him a chance to stabilize could unjustly cost him his job and worsen his situation. By shielding him temporarily, you allow time for potential improvement while also honoring the trust he placed in you. A more ethical path would be to support Sam privately, encourage him to communicate with your boss or HR himself, and reassess the situation soon.",
-        "utilitarianism": "Protect Sam (for now). Utilitarianism aims to maximize overall well-being and minimize harm. Reporting Sam could lead to his job loss at a time of personal crisis, causing significant harm to him and his children. In contrast, protecting him temporarily gives him a chance to recover and potentially improve, which could result in long-term benefit for him, his family, and the company The ethical choice is to buy time, perhaps while offering private support or helping him adjust his workload to avoid future harm.",
-        "deontology": "Report Sam truthfully. Deontological ethics focuses on moral duties and rules, regardless of consequences. If your role requires accurate reporting to HR, then you have a duty to be truthful and uphold workplace procedures, even if the result may be painful. Lying about Sam’s performance violates a professional obligation and could undermine trust, transparency, and fairness to others.",
-        "virtue ethics": "Protect Sam (with integrity). Virtue ethics asks: What would a morally good person do? A person who embodies compassion, honesty, fairness, and wisdom might protect Sam in the short term, but also take responsible steps—like encouraging Sam to talk to HR or suggesting temporary adjustments to his duties. This approach blends integrity with empathy, showing moral character while not ignoring the problem.",
-        "care ethics": "Protect Sam. Care ethics emphasizes relational context, emotional understanding, and responsibility for others’ well-being. Sam is vulnerable and clearly in need of support. A care-based response involves protecting him from immediate harm and possibly advocating for flexible treatment or internal support, while recognizing his humanity over his job performance.",
-        "option_1": "Protect Sam by saying his work is improving",
-        "option_2": "Report Sam truthfully",
-        "slider_caption_1": "Use the slider to visualize the harm created if option 1 is chosen",
-        "slider_options_1": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"],
-        "slider_caption_2": "Use the slider to visualize the harm created if option 2 is chosen",
-        "slider_options_2": ["no harm", "minimal harm", "some harm", "significant harm", "very significant harm"]
     }
 }

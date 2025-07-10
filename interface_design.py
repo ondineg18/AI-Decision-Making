@@ -5,14 +5,14 @@ from constant import *
 
 st.set_page_config(layout="wide")
 
-if "click_sequence" not in st.session_state:
-    st.session_state["click_sequence"]=[]
-if "state" not in st.session_state:
-    st.session_state["state"] = 0
-if "scenario" not in st.session_state:
-    st.session_state['scenario']=1
-if "user_answer" not in st.session_state:
-    st.session_state['user_answer']={}
+# if "click_sequence" not in st.session_state:
+#     st.session_state["click_sequence"]=[]
+# if "state" not in st.session_state:
+#     st.session_state["state"] = 0
+# if "scenario" not in st.session_state:
+#     st.session_state['scenario']=1
+# if "user_answer" not in st.session_state:
+#     st.session_state['user_answer']={}
 
 def condition1(scenario):
     data = read_data()
@@ -82,6 +82,12 @@ def condition1(scenario):
             uti_explanation = load_explanation(scenario, 'utilitarianism')
             st.write(uti_explanation)
             st.session_state["click_sequence"].append("utilitarianism")
+            print(st.session_state["click_sequence"])
+        
+        if st.button("virtue ethics framework"):
+            virtue_explanation = load_explanation(scenario, 'virtue ethics')
+            st.write(virtue_explanation)
+            st.session_state["click_sequence"].append("virtue ethics")
             print(st.session_state["click_sequence"])
 
         if st.button("care ethics framework"):
