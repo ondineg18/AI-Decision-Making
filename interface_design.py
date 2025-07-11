@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 # if "state" not in st.session_state:
 #     st.session_state["state"] = 0
 # if "scenario" not in st.session_state:
-#     st.session_state['scenario']=1
+#     st.session_state['question']=1
 # if "user_answer" not in st.session_state:
 #     st.session_state['user_answer']={}
 
@@ -121,7 +121,7 @@ def condition1(scenario):
     if st.session_state["state"]>2:
         if st.button("continue"):
             st.session_state["state"]=0
-            st.session_state["scenario"]+=1
+            st.session_state["question"]+=1
             st.rerun()
 
 
@@ -227,7 +227,7 @@ def condition2(scenario):
     if st.session_state["state"]>2:
         if st.button("continue"):
             st.session_state["state"]=0
-            st.session_state["scenario"]+=1
+            st.session_state["question"]+=1
             st.rerun()
 
 
@@ -364,8 +364,8 @@ def condition3(scenario):
     if st.session_state["state"]>2:
         if st.button("continue"):
             st.session_state["state"]=0
-            st.session_state["scenario"]+=1
+            st.session_state["question"]+=1
             st.rerun()
 
 if __name__== '__main__':
-    condition3(str(st.session_state["scenario"]))
+    condition3(str(st.session_state["question"]))

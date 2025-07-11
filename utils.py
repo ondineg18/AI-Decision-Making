@@ -1,5 +1,15 @@
 import json
 import requests
+import streamlit as st
+def hide_sidebar(set_wide=False):
+    if set_wide:
+        st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
+    else:
+        st.set_page_config(initial_sidebar_state="collapsed")
+    no_sidebar_style="""
+        <style>
+            div[data-testid="stSidebarNav"] {display: none;}
+        """
 
 def read_data():
     file_path = "AI_output" + "/dummy.json"

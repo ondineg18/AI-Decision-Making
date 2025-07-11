@@ -1,5 +1,8 @@
 from interface_design import *
 
+if "question_order" not in st.session_state:
+    st.session_state["question_order"] = []
+
 scenario_mapping = {
     1: 'condition1',
     2: "condition3",
@@ -16,6 +19,8 @@ scenario_mapping = {
 
 }
 
+st.write(st.session_state['question_order'])
+
 st.set_page_config(layout="wide")
 
 if "click_sequence" not in st.session_state:
@@ -26,13 +31,20 @@ if "scenario" not in st.session_state:
     st.session_state['scenario']=1
 if "user_answer" not in st.session_state:
     st.session_state['user_answer']={}
+if "question" not in st.session_state:
+    st.session_state["question"]=1
 
-if st.session_state["scenario"] == 13:
+if st.session_state["question"] == 13:
     st.switch_page("pages/post_study_questions.py")
 
-if scenario_mapping[st.session_state['scenario']] == 'condition1':
-    condition1(str(st.session_state["scenario"]))
-elif scenario_mapping[st.session_state['scenario']] == 'condition2':
-    condition2(str(st.session_state["scenario"]))
+# if st.session_state["question"]==5
+#     st.switch_page("pages/C1_post_questions")
+
+scenario_num = st.session_state['question_order'][st.session_state['question']]
+
+if scenario_mapping[scenario_num] == 'condition1':
+    condition1(str(scenario_num))
+elif scenario_mapping[scenario_num] == 'condition2':
+    condition2(str(scenario_num))
 else:
-    condition3(str(st.session_state["scenario"]))
+    condition3(str(scenario_num))

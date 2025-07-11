@@ -1,6 +1,8 @@
 import streamlit as st
+from utils import *
+from constant import *
 
-# hide_sidebar()
+hide_sidebar()
 
 st.title("Welcome to our study on AI-assisted decision-making.")
 
@@ -26,5 +28,7 @@ AI_frequency=st.radio(
     "How frequently do you use AI of any kind?", ["daily", "weekly", "monthly", "rarely", "not at all"]
 )
 if st.button("Submit"):
+    PID=get_participant_num()
+    st.session_state["question_order"]=participants_order[PID]
     st.switch_page("pages/questions.py")
 
