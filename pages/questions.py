@@ -21,7 +21,7 @@ scenario_mapping = {
 
 st.write(st.session_state['question_order'])
 
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 if "click_sequence" not in st.session_state:
     st.session_state["click_sequence"]=[]
@@ -42,9 +42,11 @@ if st.session_state["question"] == 13:
 
 scenario_num = st.session_state['question_order'][st.session_state['question']]
 
-if scenario_mapping[scenario_num] == 'condition1':
+condition_num = get_condition_num(st.session_state['PID'], st.session_state['question'])
+
+if condition_num == 'condition1':
     condition1(str(scenario_num))
-elif scenario_mapping[scenario_num] == 'condition2':
+elif condition_num == 'condition2':
     condition2(str(scenario_num))
 else:
     condition3(str(scenario_num))

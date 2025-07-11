@@ -4,6 +4,9 @@ from constant import *
 
 hide_sidebar()
 
+if "PID" not in st.session_state:
+    st.session_state['PID'] = -1
+
 st.title("Welcome to our study on AI-assisted decision-making.")
 
 st.text("Intro")
@@ -28,7 +31,10 @@ AI_frequency=st.radio(
     "How frequently do you use AI of any kind?", ["daily", "weekly", "monthly", "rarely", "not at all"]
 )
 if st.button("Submit"):
-    PID=get_participant_num()
-    st.session_state["question_order"]=participants_order[PID]
+    # TODO: before posting study, change to get_articipant_num
+    # st.session_state['PID']=get_participant_num()
+    # for testing setting PID = 1
+    st.session_state['PID']=1
+    st.session_state["question_order"]=participants_order[st.session_state['PID']]
     st.switch_page("pages/questions.py")
 
