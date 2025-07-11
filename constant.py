@@ -28,7 +28,7 @@ participants_order={
     12: [-1, 11, 6, 5, 12, 9, 3, 10, 4, 7, 1, 8, 2]
 }
 
-participants__condition_order={
+participants_condition_order={
     1: [1, 2, 3],
     2: [1, 3, 2],
     3: [2, 1, 3],

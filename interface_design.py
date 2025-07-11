@@ -136,17 +136,13 @@ def condition2(scenario):
     image_1 = data[scenario]['image_1']
     image_2 = data[scenario]['image_2']
     
-    print(question_type_mapping[scenario])
-    print(question_type_mapping[scenario]=="multiple_choice")
     if question_type_mapping[scenario]=="multiple_choice":
-
 
         first_choice=st.radio(
             "",
             options=[option_1, option_2], key=scenario+"_"+"first_choice")
 
     else:
-        print(question_type_mapping[scenario])
         option_3 = data[scenario]['option_3']
         first_choice_1 = st.slider(option_1, 1, 7, 1, key=scenario+"_"+"first_choice_1")
         first_choice_2 = st.slider(option_2, 1, 7, 1, key=scenario+"_"+"first_choice_2")

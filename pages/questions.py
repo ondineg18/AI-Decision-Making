@@ -44,9 +44,9 @@ scenario_num = st.session_state['question_order'][st.session_state['question']]
 
 condition_num = get_condition_num(st.session_state['PID'], st.session_state['question'])
 
-if condition_num == 'condition1':
+if condition_num == 1:
     condition1(str(scenario_num))
-elif condition_num == 'condition2':
+elif condition_num == 2:
     condition2(str(scenario_num))
 else:
     condition3(str(scenario_num))

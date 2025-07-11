@@ -34,4 +34,4 @@ def get_participant_num():
 
 def get_condition_num(pid, question):
     block_id = (question - 1) // 4
-    return participants_order[pid][block_id]
+    return participants_condition_order[pid][block_id - 1]
