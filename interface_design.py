@@ -14,6 +14,8 @@ st.set_page_config(layout="wide")
 # if "user_answer" not in st.session_state:
 #     st.session_state['user_answer']={}
 
+# actions[scenario]=[[action_name, time, choice],[],[], ...]
+
 def condition1(scenario):
     data = read_data()
     st.title(data[scenario]['scenario'])
@@ -25,7 +27,7 @@ def condition1(scenario):
 
         first_choice=st.radio(
             "",
-            options=[option_1, option_2], key="first_choice")
+            options=[option_1, option_2], key=scenario+"_"+"first_choice", index=None)
 
     if question_type_mapping[scenario]=="slider":
         option_3 = data[scenario]['option_3']
@@ -40,12 +42,12 @@ def condition1(scenario):
         else:
             answer = [first_choice_1, first_choice_2, first_choice_3]
         st.session_state['state']+=1
-        st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+        st.session_state['user_answer'][scenario + "first_choice"] = [str(datetime.now()), answer]
 
     if st.session_state["state"]>0:
         AI_suggestion = load_explanation(scenario, "AI-suggestions")
         st.write("## AI Suggestion")
-        st.write(AI_suggestion)
+        st.text(AI_suggestion)
 
         st.write("## Update or maintain your decision")
        
@@ -53,7 +55,7 @@ def condition1(scenario):
 
             second_choice=st.radio(
             "",
-            options=[option_1, option_2], key="second_choice")
+            options=[option_1, option_2], key=scenario+"_"+"second_choice", index=None)
 
         if question_type_mapping[scenario]=="slider":
             option_3 = data[scenario]['option_3']
@@ -63,36 +65,36 @@ def condition1(scenario):
         
         if st.button("confirm", key="second_button"):
             if question_type_mapping[scenario]=="multiple_choice":
-                answer = first_choice
+                answer = second_choice
             else:
-                answer = [first_choice_1, first_choice_2, first_choice_3]
+                answer = [second_choice_1, second_choice_2, second_choice_3]
             st.session_state['state']+=1
-            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+            st.session_state['user_answer'][scenario + "second_choice"] = [str(datetime.now()), answer]
 
     if st.session_state["state"]>1:
         st.write("## Click to explore decision choices based on different ethical frameworks")
         
         if st.button("deontology framework"):
             deontology_explanation = load_explanation(scenario, 'deontology')
-            st.write(deontology_explanation)
+            st.text(deontology_explanation)
             st.session_state["click_sequence"].append("deontology")
             print(st.session_state["click_sequence"])
 
         if st.button("utilitarianism framework"):
             uti_explanation = load_explanation(scenario, 'utilitarianism')
-            st.write(uti_explanation)
+            st.text(uti_explanation)
             st.session_state["click_sequence"].append("utilitarianism")
             print(st.session_state["click_sequence"])
         
         if st.button("virtue ethics framework"):
             virtue_explanation = load_explanation(scenario, 'virtue ethics')
-            st.write(virtue_explanation)
+            st.text(virtue_explanation)
             st.session_state["click_sequence"].append("virtue ethics")
             print(st.session_state["click_sequence"])
 
         if st.button("care ethics framework"):
             care_explanation = load_explanation(scenario, 'care ethics')
-            st.write(care_explanation)
+            st.text(care_explanation)
             st.session_state["click_sequence"].append("care ethics")
             print(st.session_state["click_sequence"])
 
@@ -102,7 +104,7 @@ def condition1(scenario):
 
             third_choice=st.radio(
             "",
-            options=[option_1, option_2], key="third_choice")
+            options=[option_1, option_2], key=scenario+"_"+"third_choice", index=None)
 
         if question_type_mapping[scenario]=="slider":
             option_3 = data[scenario]['option_3']
@@ -112,11 +114,11 @@ def condition1(scenario):
      
         if st.button("confirm", key="third_button"):
             if question_type_mapping[scenario]=="multiple_choice":
-                answer = first_choice
+                answer = third_choice
             else:
-                answer = [first_choice_1, first_choice_2, first_choice_3]
+                answer = [third_choice_1, third_choice_2, third_choice_3]
             st.session_state['state']+=1
-            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+            st.session_state['user_answer'][scenario + "third_choice"] = [str(datetime.now()), answer]
 
     if st.session_state["state"]>2:
         if st.button("continue"):
@@ -140,10 +142,11 @@ def condition2(scenario):
 
         first_choice=st.radio(
             "",
-            options=[option_1, option_2], key=scenario+"_"+"first_choice")
+            options=[option_1, option_2], key=scenario+"_"+"first_choice", index=None)
 
     else:
         option_3 = data[scenario]['option_3']
+        image_3 = data[scenario]['image_3']
         first_choice_1 = st.slider(option_1, 1, 7, 1, key=scenario+"_"+"first_choice_1")
         first_choice_2 = st.slider(option_2, 1, 7, 1, key=scenario+"_"+"first_choice_2")
         first_choice_3 = st.slider(option_3, 1, 7, 1, key=scenario+"_"+"first_choice_3")
@@ -155,12 +158,12 @@ def condition2(scenario):
             answer = [first_choice_1, first_choice_2, first_choice_3]
         now = datetime.now()
         st.session_state['state']+=1
-        st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+        st.session_state['user_answer'][scenario + "first_choice"] = answer
 
     if st.session_state["state"]>0:
         AI_suggestion = load_explanation(scenario, "AI-suggestions")
         st.write("## AI Suggestion")
-        st.write(AI_suggestion)
+        st.text(AI_suggestion)
 
         st.write("## Update or maintain your decision")
         
@@ -168,7 +171,7 @@ def condition2(scenario):
 
             second_choice=st.radio(
             "",
-            options=[option_1, option_2], key="second_choice")
+            options=[option_1, option_2], key=scenario+"_"+"second_choice", index=None)
 
         else:
             option_3 = data[scenario]['option_3']
@@ -178,24 +181,37 @@ def condition2(scenario):
         
         if st.button("confirm", key="second_button"):
             if question_type_mapping[scenario]=="multiple_choice":
-                answer = first_choice
+                answer = second_choice
             else:
-                answer = [first_choice_1, first_choice_2, first_choice_3]
+                answer = [second_choice_1, second_choice_2, second_choice_3]
             now = datetime.now()
             st.session_state['state']+=1
-            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+            st.session_state['user_answer'][scenario + "second_choice"] = answer
 
 
     if st.session_state["state"]>1:
-               
-        col1, col2 = st.columns(2)
+        
+        if question_type_mapping[scenario]=="multiple_choice":
+            col1, col2 = st.columns(2)
 
-        with col1:  
-            st.header(option_1)
-            st.image(image_1)
-        with col2:
-            st.header(option_2)
-            st.image(image_2)
+            with col1:  
+                st.header(option_1)
+                st.image(image_1)
+            with col2:
+                st.header(option_2)
+                st.image(image_2)
+        else:
+            col1, col2, col3 = st.columns(3)
+
+            with col1:  
+                st.header(option_1)
+                st.image(image_1)
+            with col2:
+                st.header(option_2)
+                st.image(image_2)
+            with col3:
+                st.header(option_3)
+                st.image(image_3)
 
         st.write("## Update or maintain your decision")
         
@@ -203,7 +219,7 @@ def condition2(scenario):
 
             third_choice=st.radio(
                 "",
-                options=[option_1, option_2], key="third_choice")
+                options=[option_1, option_2], key=scenario+"_"+"third_choice", index=None)
 
         else:
             option_3 = data[scenario]['option_3']
@@ -213,12 +229,12 @@ def condition2(scenario):
 
         if st.button("confirm", key="third_button"):
             if question_type_mapping[scenario]=="multiple_choice":
-                answer = first_choice
+                answer = third_choice
             else:
-                answer = [first_choice_1, first_choice_2, first_choice_3]
+                answer = [third_choice_1, third_choice_2, third_choice_3]
             now = datetime.now()
             st.session_state['state']+=1
-            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+            st.session_state['user_answer'][scenario + "third_choice"] = answer
 
     if st.session_state["state"]>2:
         if st.button("continue"):
@@ -240,7 +256,7 @@ def condition3(scenario):
 
         first_choice=st.radio(
             "",
-            options=[option_1, option_2], key="first_choice")
+            options=[option_1, option_2], key=scenario+"_"+"first_choice", index=None)
 
     else:
         option_3 = data[scenario]['option_3']
@@ -254,12 +270,12 @@ def condition3(scenario):
         else:
             answer = [first_choice_1, first_choice_2, first_choice_3]
         st.session_state['state']+=1
-        st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+        st.session_state['user_answer'][scenario + "first_choice"] = answer
 
     if st.session_state["state"]>0:
         AI_suggestion = load_explanation(scenario, "AI-suggestions")
         st.write("## AI Suggestion")
-        st.write(AI_suggestion)
+        st.text(AI_suggestion)
 
         st.write("## Update or maintain your decision")
        
@@ -267,7 +283,7 @@ def condition3(scenario):
 
             second_choice=st.radio(
             "",
-            options=[option_1, option_2], key="second_choice")
+            options=[option_1, option_2], key=scenario+"_"+"second_choice", index=None)
 
         else:
             option_3 = data[scenario]['option_3']
@@ -277,14 +293,14 @@ def condition3(scenario):
         
         if st.button("confirm", key="second_button"):
             if question_type_mapping[scenario]=="multiple_choice":
-                answer = first_choice
+                answer = second_choice
             else:
-                answer = [first_choice_1, first_choice_2, first_choice_3]
+                answer = [second_choice_1, second_choice_2, second_choice_3]
             st.session_state['state']+=1
-            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+            st.session_state['user_answer'][scenario + "second_choice"] = answer
 
     if st.session_state["state"]>1:
-        st.write("Pick an ethical framework to explore with an interactive tool")
+        st.write("## Pick an ethical framework to explore with an interactive tool")
         
         with st.expander("utilitarianism"):
 
@@ -327,12 +343,12 @@ def condition3(scenario):
                 ["sad", "happy", "angry", "relieved", "scared", "loved", "guilty", "hopeful", "stressed",]
             )
 
-        if question_type_mapping[scenario]=="slider":
-                    
-            emotions_3 = st.multiselect(
-                "If option 3 is chosen, who is affected the most emotionally? How will they feel?",
-                ["sad", "happy", "angry", "relieved", "scared", "loved", "guilty", "hopeful", "stressed",]
-            )
+            if question_type_mapping[scenario]=="slider":
+                        
+                emotions_3 = st.multiselect(
+                    "If option 3 is chosen, who is affected the most emotionally? How will they feel?",
+                    ["sad", "happy", "angry", "relieved", "scared", "loved", "guilty", "hopeful", "stressed",]
+                )
 
 
         st.write("## Update or maintain your decision")  
@@ -341,7 +357,7 @@ def condition3(scenario):
 
             third_choice=st.radio(
             "",
-            options=[option_1, option_2], key="third_choice")
+            options=[option_1, option_2], key=scenario+"_"+"third_choice", index=None)
 
         else:
             option_3 = data[scenario]['option_3']
@@ -351,11 +367,11 @@ def condition3(scenario):
      
         if st.button("confirm", key="third_button"):
             if question_type_mapping[scenario]=="multiple_choice":
-                answer = first_choice
+                answer = third_choice
             else:
-                answer = [first_choice_1, first_choice_2, first_choice_3]
+                answer = [third_choice_1, third_choice_2, third_choice_3]
             st.session_state['state']+=1
-            st.session_state['user_answer'][scenario + "_" +str(st.session_state["state"])] = answer
+            st.session_state['user_answer'][scenario + "third_choice"] = answer
 
     if st.session_state["state"]>2:
         if st.button("continue"):

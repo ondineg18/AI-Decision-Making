@@ -1,4 +1,7 @@
 import streamlit as st
+import json
+
+st.write("## Post-Study Questions")
 
 first_question=st.radio(
     "After seeing AI’s suggestion (and before seeing any explanation, image, or interactive features), how inclined were you to accept AI’s suggestion at the expense of your own?",
@@ -69,23 +72,29 @@ fourth_question=st.radio(
 # likely=st.slider("I felt more confident in the decisions I made after using the interactive features", 1, 7)
 
 fifth_question=st.radio(
-    "Did the explanations, images, or interactive features most significantly influence you to reconsider or disagree with AI’s suggestions after exploring them?",
+    "Rank how significantly the explanations, images, and interactive features influenced you to reconsider or disagree with AI’s suggestions after exploring them.",
     options=["explanations", "images", "interactive features"],
     key="fifth_question",
     index=None
 )
 
 sixth_question=st.radio(
-    "Did the explanations, images, or interactive features most encourage you to think for yourself beyond AI’s suggestions?",
+    "Rank how significantly the explanations, images, and interactive features encouraged you to think for yourself beyond AI’s suggestions.",
     options=["explanations", "images", "interactive features"],
     key="sixth_question",
     index=None
 )
 
 seventh_question=st.radio(
-    "Did you enjoy using the explanations, images, or interactive features the most?",
+    "Rank your enjoyment of the explanations, images, and interactive features.",
     options=["explanations", "images", "interactive features"],
     key="seventh_question",
     index=None
 )
+
+save_path = st.session_state['id'] +'.jsonl'
+
+with open (save_path, 'w') as file:
+    json_line = json.dumps(st.session_state["user_answer"])
+    file.write(json_line +'\n')
     

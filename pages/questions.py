@@ -1,7 +1,7 @@
 from interface_design import *
 
-if "question_order" not in st.session_state:
-    st.session_state["question_order"] = []
+# if "question_order" not in st.session_state:
+#     st.session_state["question_order"] = []
 
 scenario_mapping = {
     1: 'condition1',
@@ -33,16 +33,51 @@ if "user_answer" not in st.session_state:
     st.session_state['user_answer']={}
 if "question" not in st.session_state:
     st.session_state["question"]=1
+if "condition_questionnaire" not in st.session_state:
+    st.session_state['condition_questionnaire'] = 0
 
-if st.session_state["question"] == 13:
-    st.switch_page("pages/post_study_questions.py")
 
 # if st.session_state["question"]==5
 #     st.switch_page("pages/C1_post_questions")
 
-scenario_num = st.session_state['question_order'][st.session_state['question']]
+if st.session_state['question'] <= 12:
+    scenario_num = st.session_state['question_order'][st.session_state['question']]
 
 condition_num = get_condition_num(st.session_state['PID'], st.session_state['question'])
+
+print("question ",  st.session_state["question"])
+print("condition ", st.session_state["condition_questionnaire"])
+print(st.session_state["question"] == 5 and st.session_state['condition_questionnaire'] == 0)
+
+if st.session_state["question"] == 5 and st.session_state['condition_questionnaire'] == 0:
+    c_num = get_condition_num(st.session_state['PID'], st.session_state['question'] - 1)
+    st.session_state['condition_questionnaire'] += 1
+    if c_num == 1:
+        st.switch_page("pages/C1_post_questions.py")
+    if c_num == 2:
+        st.switch_page("pages/C2_post_questions.py")
+    if c_num == 3:
+        st.switch_page("pages/C3_post_questions.py")   
+
+if st.session_state["question"] == 9 and st.session_state['condition_questionnaire'] == 1:
+    c_num = get_condition_num(st.session_state['PID'], st.session_state['question'] - 1)
+    st.session_state['condition_questionnaire'] += 1
+    if c_num == 1:
+        st.switch_page("pages/C1_post_questions.py")
+    if c_num == 2:
+        st.switch_page("pages/C2_post_questions.py")
+    if c_num == 3:
+        st.switch_page("pages/C3_post_questions.py")  
+
+if st.session_state["question"] == 13:
+    c_num = get_condition_num(st.session_state['PID'], st.session_state['question'] - 1)
+    st.session_state['condition_questionnaire'] += 1
+    if c_num == 1:
+        st.switch_page("pages/C1_post_questions.py")
+    if c_num == 2:
+        st.switch_page("pages/C2_post_questions.py")
+    if c_num == 3:
+        st.switch_page("pages/C3_post_questions.py")  
 
 if condition_num == 1:
     condition1(str(scenario_num))
