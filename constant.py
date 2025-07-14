@@ -13,6 +13,8 @@ question_type_mapping={
     "12": "multiple_choice",
 }
 
+scenario_is_donation=['1', '4']
+
 participants_order={
     1: [-1, 7, 1, 8, 2, 9, 3, 10, 4, 11, 6, 5, 12],
     2: [-1, 9, 3, 10, 4, 11, 6, 5, 12, 7, 1, 8, 2],

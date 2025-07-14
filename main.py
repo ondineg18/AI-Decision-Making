@@ -27,7 +27,9 @@ Interactive user interface elements, such as sliders and checkboxes, designed to
 After every 4 scenarios, you will be asked to answer a few questions about the AI support mechanisms provided in those scenarios. After completing all 12 scenarios, you will be asked to answer some post-study questions, which then leads to the conclusion of the study.
 "'''
 
+
 st.write(intro)
+st.write(":red[Please do not refresh the browswer during the study, otherwise your data will be lost.]")
 st.divider()
 
 # pre-study questions

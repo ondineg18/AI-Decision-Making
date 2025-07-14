@@ -19,8 +19,6 @@ scenario_mapping = {
 
 }
 
-st.write(st.session_state['question_order'])
-
 # st.set_page_config(layout="wide")
 
 if "click_sequence" not in st.session_state:
@@ -40,14 +38,20 @@ if "condition_questionnaire" not in st.session_state:
 # if st.session_state["question"]==5
 #     st.switch_page("pages/C1_post_questions")
 
+html_reminder = """
+<div style='background-color: #ff6347; color: #f0f2f6; padding: 10px;'>
+    <strong>Please do not refresh the web page.</strong> Otherwise, your previous answers will be lost.<br>
+    If you clicked Confirm but the page isn’t responding, it’s likely because you haven’t made a selection yet.
+</div>
+"""
+
+st.markdown(html_reminder, unsafe_allow_html=True)
+
 if st.session_state['question'] <= 12:
     scenario_num = st.session_state['question_order'][st.session_state['question']]
 
 condition_num = get_condition_num(st.session_state['PID'], st.session_state['question'])
 
-print("question ",  st.session_state["question"])
-print("condition ", st.session_state["condition_questionnaire"])
-print(st.session_state["question"] == 5 and st.session_state['condition_questionnaire'] == 0)
 
 if st.session_state["question"] == 5 and st.session_state['condition_questionnaire'] == 0:
     c_num = get_condition_num(st.session_state['PID'], st.session_state['question'] - 1)
