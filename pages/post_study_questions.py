@@ -92,9 +92,20 @@ seventh_question=st.radio(
     index=None
 )
 
-save_path = st.session_state['id'] +'.jsonl'
+post_questions = [first_question, second_question, third_question, fourth_question, fifth_question, sixth_question, seventh_question]
+if st.button('Confirm') and None not in post_questions:
+    save_path = st.session_state['id'] +'.jsonl'
 
-with open (save_path, 'w') as file:
-    json_line = json.dumps(st.session_state["user_answer"])
-    file.write(json_line +'\n')
+    data_to_save = {
+        "user_answer": st.session_state.get("user_answer"),
+        "actions": st.session_state.get("actions"),
+        "pre_questions": st.session_state.get("pre_questions"),
+        "C1_questions": st.session_state.get("C1_questions"),
+        "C2_questions": st.session_state.get("C2_questions"),
+        "C3_questions": st.session_state.get("C3_questions")
+    }
+
+    with open (save_path, 'w') as file:
+        json_line = json.dumps(data_to_save)
+        file.write(json_line +'\n')
     

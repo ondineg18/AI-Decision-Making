@@ -47,6 +47,8 @@ def condition1(scenario):
             answer = first_choice
         else:
             answer = [first_choice_1, first_choice_2, first_choice_3]
+        st.session_state['state']+=1
+        st.session_state['user_answer'][scenario + "first_choice"] = [str(datetime.now()), answer]
 
     if st.session_state["state"]>0:
         AI_suggestion = load_explanation(scenario, "AI-suggestions")
@@ -81,6 +83,8 @@ def condition1(scenario):
                 answer = second_choice
             else:
                 answer = [second_choice_1, second_choice_2, second_choice_3]
+            st.session_state['state']+=1
+            st.session_state['user_answer'][scenario + "first_choice"] = [str(datetime.now()), answer]
 
     if st.session_state["state"]>1:
         st.write("## Click to explore decision choices based on different ethical frameworks")
@@ -133,7 +137,7 @@ def condition1(scenario):
                 answer = third_choice
             else:
                 answer = [third_choice_1, third_choice_2, third_choice_3]
-
+            
             st.session_state['actions'][scenario+'c1_click_hist'] = st.session_state["click_sequence"]
             st.session_state["click_sequence"] = []
             st.session_state['state']+=1

@@ -89,3 +89,5 @@ elif condition_num == 2:
     condition2(str(scenario_num))
 else:
     condition3(str(scenario_num))
+
+print("TEST", scenario_num)
