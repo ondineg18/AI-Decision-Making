@@ -2,6 +2,7 @@ import json
 import requests
 import streamlit as st
 from constant import *
+import dropbox
 
 def hide_sidebar(set_wide=False):
     if set_wide:
@@ -35,3 +36,19 @@ def get_participant_num():
 def get_condition_num(pid, question):
     block_id = (question - 1) // 4
     return participants_condition_order[pid][block_id - 1]
+
+def upload_file_to_dropbox(file_path, dropbox_path):
+    app_key = st.secrets["dropbox"]["app_key"]
+    app_secret = st.secrets["dropbox"]["app_secret"]
+    refresh_token = st.secrets["dropbox"]["refresh_token"]
+    try:
+        dbx = dropbox.Dropbox(
+            oauth2_refresh_token=refresh_token,
+            app_key=app_key,
+            app_secret=app_secret
+        )
+        
+        with open(file_path, "rb") as f:
+            dbx.files_upload(f.read(), dropbox_path, mode=dropbox.files.WriteMode.overwrite)
+    except Exception as e:
+        print("Error during file upload:", e)

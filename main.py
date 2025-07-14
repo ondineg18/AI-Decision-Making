@@ -29,7 +29,7 @@ After every 4 scenarios, you will be asked to answer a few questions about the A
 
 
 st.write(intro)
-st.write(":red[Please do not refresh the browswer during the study, otherwise your data will be lost.]")
+st.write(":red[Please do not refresh the browser during the study, otherwise your data will be lost.]")
 st.divider()
 
 # pre-study questions

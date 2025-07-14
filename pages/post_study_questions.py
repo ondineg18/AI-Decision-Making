@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+from utils import *
 
 st.write("## Post-Study Questions")
 
@@ -106,6 +107,12 @@ if st.button('Confirm') and None not in post_questions:
     }
 
     with open (save_path, 'w') as file:
+        print("TEST 200", st.session_state['C2_questions'])
         json_line = json.dumps(data_to_save)
         file.write(json_line +'\n')
+
+    save_path = st.session_state['id'] +'.jsonl'
+    dropbox_save_path = '/results-ethical/' + st.session_state['id'] + '.jsonl'
+    upload_file_to_dropbox(save_path, dropbox_path = dropbox_save_path)
+    st.switch_page("pages/final_page.py")
     

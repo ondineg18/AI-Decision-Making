@@ -34,12 +34,16 @@ def condition1(scenario):
         option_3 = data[scenario]['option_3']
         if scenario in scenario_is_donation: 
             likert_max = 10000
+            likert_min = 0
+            likert_step = 1000
             st.write("*Please make sure the sum of your three choices is less than 10000*")
         else:
             likert_max = 7
-        first_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"first_choice_1")
-        first_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"first_choice_2")
-        first_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"first_choice_3")
+            likert_step = 1
+            likert_min = 1
+        first_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_1")
+        first_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_2")
+        first_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_3")
         st.session_state['first_choice'] = True
     if st.button("confirm", key="first_button") and st.session_state['first_choice'] == True:
         answer=None
@@ -48,7 +52,7 @@ def condition1(scenario):
         else:
             answer = [first_choice_1, first_choice_2, first_choice_3]
         st.session_state['state']+=1
-        st.session_state['user_answer'][scenario + "first_choice"] = [str(datetime.now()), answer]
+        st.session_state['user_answer'][scenario + "first_choiceC1"] = [str(datetime.now()), answer]
 
     if st.session_state["state"]>0:
         AI_suggestion = load_explanation(scenario, "AI-suggestions")
@@ -70,12 +74,16 @@ def condition1(scenario):
             option_3 = data[scenario]['option_3']
             if scenario in scenario_is_donation: 
                 likert_max = 10000
+                likert_min = 0
+                likert_step = 1000
                 st.write("*Please make sure the sum of your three choices is less than 10000*")
             else:
                 likert_max = 7
-            second_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"second_choice_1")
-            second_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"second_choice_2")
-            second_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"second_choice_3")
+                likert_min = 1
+                likert_step = 1
+            second_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_1")
+            second_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_2")
+            second_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_3")
             st.session_state['second_choice'] = True
 
         if st.button("confirm", key="second_button") and st.session_state['second_choice'] == True:
@@ -84,7 +92,7 @@ def condition1(scenario):
             else:
                 answer = [second_choice_1, second_choice_2, second_choice_3]
             st.session_state['state']+=1
-            st.session_state['user_answer'][scenario + "first_choice"] = [str(datetime.now()), answer]
+            st.session_state['user_answer'][scenario + "second_choiceC1"] = [str(datetime.now()), answer]
 
     if st.session_state["state"]>1:
         st.write("## Click to explore decision choices based on different ethical frameworks")
@@ -123,12 +131,16 @@ def condition1(scenario):
             option_3 = data[scenario]['option_3']
             if scenario in scenario_is_donation: 
                 likert_max = 10000
+                likert_min = 0
+                likert_step = 1000
                 st.write("*Please make sure the sum of your three choices is less than 10000*")
             else:
                 likert_max = 7
-            third_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"third_choice_1")
-            third_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"third_choice_2")
-            third_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"third_choice_3")
+                likert_min = 1
+                likert_step = 1
+            third_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_1")
+            third_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_2")
+            third_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_3")
 
             st.session_state['third_choice'] = True
 
@@ -176,12 +188,16 @@ def condition2(scenario):
         image_3 = data[scenario]['image_3']
         if scenario in scenario_is_donation: 
             likert_max = 10000
+            likert_min = 0
+            likert_step = 1000
             st.write("*Please make sure the sum of your three choices is less than 10000*")
         else:
             likert_max = 7
-        first_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"first_choice_1")
-        first_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"first_choice_2")
-        first_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"first_choice_3")
+            likert_min = 1
+            likert_step = 1
+        first_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_1")
+        first_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_2")
+        first_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_3")
         st.session_state['first_choice'] = True
 
     if st.button("confirm", key="first_button") and st.session_state['first_choice']:
@@ -211,12 +227,16 @@ def condition2(scenario):
             option_3 = data[scenario]['option_3']
             if scenario in scenario_is_donation: 
                 likert_max = 10000
+                likert_min = 0
+                likert_step = 1000
                 st.write("*Please make sure the sum of your three choices is less than 10000*")
             else:
                 likert_max = 7
-            second_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"second_choice_1")
-            second_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"second_choice_2")
-            second_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"second_choice_3")
+                likert_min = 1
+                likert_step = 1
+            second_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_1")
+            second_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_2")
+            second_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_3")
             st.session_state['second_choice'] = True
         
         if st.button("confirm", key="second_button") and st.session_state['second_choice'] == True:
@@ -264,13 +284,17 @@ def condition2(scenario):
         else:
             option_3 = data[scenario]['option_3']
             if scenario in scenario_is_donation: 
+                likert_min = 0
                 likert_max = 10000
+                likert_step = 1000
                 st.write("*Please make sure the sum of your three choices is less than 10000*")
             else:
+                likert_min = 1
                 likert_max = 7
-            third_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"third_choice_1")
-            third_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"third_choice_2")
-            third_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"third_choice_3")
+                likert_step = 1
+            third_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_1")
+            third_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_2")
+            third_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_3")
             st.session_state['third_choice'] = True
 
         if st.button("confirm", key="third_button") and st.session_state['third_choice'] == True:
@@ -311,12 +335,16 @@ def condition3(scenario):
         option_3 = data[scenario]['option_3']
         if scenario in scenario_is_donation: 
             likert_max = 10000
+            likert_min = 0
+            likert_step = 1000
             st.write("*Please make sure the sum of your three choices is less than 10000*")
         else:
             likert_max = 7
-        first_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"first_choice_1")
-        first_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"first_choice_2")
-        first_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"first_choice_3")
+            likert_step = 1
+            likert_min = 1
+        first_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_1")
+        first_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_2")
+        first_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"first_choice_3")
         st.session_state['first_choice'] = True
 
     if st.button("confirm", key="first_button") and st.session_state['first_choice'] == True:
@@ -346,12 +374,16 @@ def condition3(scenario):
             option_3 = data[scenario]['option_3']
             if scenario in scenario_is_donation: 
                 likert_max = 10000
+                likert_min = 0
+                likert_step = 1
                 st.write("*Please make sure the sum of your three choices is less than 10000*")
             else:
                 likert_max = 7
-            second_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"second_choice_1")
-            second_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"second_choice_2")
-            second_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"second_choice_3")
+                likert_min = 1
+                likert_step = 1
+            second_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_1")
+            second_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_2")
+            second_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"second_choice_3")
             st.session_state['second_choice'] = True
         
         if st.button("confirm", key="second_button") and st.session_state['second_choice'] == True:
@@ -441,12 +473,16 @@ def condition3(scenario):
             option_3 = data[scenario]['option_3']
             if scenario in scenario_is_donation: 
                 likert_max = 10000
+                likert_min = 0
+                likert_step = 1000
                 st.write("*Please make sure the sum of your three choices is less than 10000*")
             else:
                 likert_max = 7
-            third_choice_1 = st.slider(option_1, 1, likert_max, 1, key=scenario+"_"+"third_choice_1")
-            third_choice_2 = st.slider(option_2, 1, likert_max, 1, key=scenario+"_"+"third_choice_2")
-            third_choice_3 = st.slider(option_3, 1, likert_max, 1, key=scenario+"_"+"third_choice_3")
+                likert_min = 1
+                likert_step = 1
+            third_choice_1 = st.slider(option_1, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_1")
+            third_choice_2 = st.slider(option_2, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_2")
+            third_choice_3 = st.slider(option_3, likert_min, likert_max, step=likert_step, key=scenario+"_"+"third_choice_3")
             st.session_state['third_choice'] = True
      
         if st.button("confirm", key="third_button") and st.session_state['third_choice'] == True:

@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Please answer the following questions based on your experience with previous questions AI decision support aids")
+st.title("Please answer the following questions based on your experience with the AI decision support aids in the previous questions")
 IF_1=st.slider("The interactive features encouraged me to think critically about my decisions", 1, 7, key="IF_1")
 IF_2=st.slider("I considered multiple perspectives before making my decisions", 1, 7, key="IF_2")
 IF_3=st.slider("The interactive features made the dilemmas feel more real or emotionally engaging", 1, 7, key="IF_3")
