@@ -92,22 +92,22 @@ def condition1(scenario):
         if st.button("deontology framework"):
             deontology_explanation = load_explanation(scenario, 'deontology')
             st.write(deontology_explanation)
-            st.session_state["click_sequence"].append([str(datetime.now), "deontology"])
+            st.session_state["click_sequence"].append([str(datetime.now()), "deontology"])
 
         if st.button("utilitarianism framework"):
             uti_explanation = load_explanation(scenario, 'utilitarianism')
             st.write(uti_explanation)
-            st.session_state["click_sequence"].append([str(datetime.now), "utilitarianism"])
+            st.session_state["click_sequence"].append([str(datetime.now()), "utilitarianism"])
         
         if st.button("virtue ethics framework"):
             virtue_explanation = load_explanation(scenario, 'virtue ethics')
             st.write(virtue_explanation)
-            st.session_state["click_sequence"].append([str(datetime.now), "virtue ethics"])
+            st.session_state["click_sequence"].append([str(datetime.now()), "virtue ethics"])
 
         if st.button("care ethics framework"):
             care_explanation = load_explanation(scenario, 'care ethics')
             st.write(care_explanation)
-            st.session_state["click_sequence"].append([str(datetime.now), "care ethics"])
+            st.session_state["click_sequence"].append([str(datetime.now()), "care ethics"])
 
         st.write("## Update or maintain your decision")
         
