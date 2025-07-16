@@ -1,4 +1,5 @@
 import streamlit as st
+from utils import *
 hide_sidebar()
 
 st.title("Thank you for your participation. Here is your Prolific code:")
