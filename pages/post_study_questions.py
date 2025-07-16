@@ -132,7 +132,11 @@ if st.button('Confirm') and None not in post_questions:
         "pre_questions": st.session_state.get("pre_questions"),
         "C1_questions": st.session_state.get("C1_questions"),
         "C2_questions": st.session_state.get("C2_questions"),
-        "C3_questions": st.session_state.get("C3_questions")
+        "C3_questions": st.session_state.get("C3_questions"),
+        "post_quesitons": post_questions,
+        "PID": st.session_state.get("PID"),
+        "id": st.session_state.get("id"),
+        "question_order": st.session_state.get("question_order"),
     }
 
     with open (save_path, 'w') as file:
