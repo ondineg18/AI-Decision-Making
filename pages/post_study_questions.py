@@ -73,27 +73,55 @@ fourth_question=st.radio(
 # likely=st.slider("I felt more confident in the decisions I made after using the interactive features", 1, 7)
 
 fifth_question=st.radio(
-    "Rank how significantly the explanations, images, and interactive features influenced you to reconsider or disagree with AI’s suggestions after exploring them.",
+    "Which decision-support aid most influenced you to reconsider or disagree with AI’s suggestions after exploring it?",
     options=["explanations", "images", "interactive features"],
     key="fifth_question",
     index=None
 )
 
 sixth_question=st.radio(
-    "Rank how significantly the explanations, images, and interactive features encouraged you to think for yourself beyond AI’s suggestions.",
+    "Which decision-support aid was the next most inflential in leading you to reconsider or disagree with AI's suggestions?",
     options=["explanations", "images", "interactive features"],
     key="sixth_question",
     index=None
 )
 
+attention_question=st.radio(
+    "Please select images for this question. This is an attention-check question.",
+    options=["explanations", "images", "interactive features"],
+    key="attention_question",
+    index=None
+)
+
 seventh_question=st.radio(
-    "Rank your enjoyment of the explanations, images, and interactive features.",
+    "Which decision-support aid most encouraged you to think for yourself beyond AI’s suggestions?",
     options=["explanations", "images", "interactive features"],
     key="seventh_question",
     index=None
 )
 
-post_questions = [first_question, second_question, third_question, fourth_question, fifth_question, sixth_question, seventh_question]
+eighth_question=st.radio(
+    "Which decision-support aid was the next most influential in encouraging you to think for yourself beyond AI’s suggestions?",
+    options=["explanations", "images", "interactive features"],
+    key="eighth_question",
+    index=None
+)
+
+ninth_question=st.radio(
+    "Which decision-support aid did you enjoy using the most?",
+    options=["explanations", "images", "interactive features"],
+    key="ninth_question",
+    index=None
+)
+
+tenth_question=st.radio(
+    "Which decision-support aid did you enjoy using the least?",
+    options=["explanations", "images", "interactive features"],
+    key="tenth_question",
+    index=None
+)
+
+post_questions = [first_question, second_question, third_question, fourth_question, fifth_question, sixth_question, seventh_question, eighth_question, ninth_question, tenth_question, attention_question]
 if st.button('Confirm') and None not in post_questions:
     save_path = st.session_state['id'] +'.jsonl'
 

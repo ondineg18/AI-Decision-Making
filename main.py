@@ -1,6 +1,7 @@
 import streamlit as st
 from utils import *
 from constant import *
+# from analysis import analyze_user_data
 
 hide_sidebar()
 
@@ -63,7 +64,8 @@ if st.button("Submit"):
     if "" in user_choices or (user_checkbox.count(False) >= 5):
         st.write(":red[Please fill in all fields]")
     else:
-        st.session_state['PID']=1
+        # st.session_state['PID']=1
+        st.session_state['PID']=get_participant_num() %6
         st.session_state["question_order"]=participants_order[st.session_state['PID']]
         st.session_state['pre_questions']['user_choices'] = user_choices
         st.session_state['pre_questions']['user_checkbox'] = user_checkbox

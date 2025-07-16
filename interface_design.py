@@ -36,7 +36,7 @@ def condition1(scenario):
             likert_max = 10000
             likert_min = 0
             likert_step = 1000
-            st.write("*Please make sure the sum of your three choices is less than 10000*")
+            st.write("*Please make sure the sum of your three choices is equal to 10000*")
         else:
             likert_max = 7
             likert_step = 1
@@ -76,7 +76,7 @@ def condition1(scenario):
                 likert_max = 10000
                 likert_min = 0
                 likert_step = 1000
-                st.write("*Please make sure the sum of your three choices is less than 10000*")
+                st.write("*Please make sure the sum of your three choices is equal to 10000*")
             else:
                 likert_max = 7
                 likert_min = 1
@@ -99,21 +99,25 @@ def condition1(scenario):
         
         if st.button("deontology framework"):
             deontology_explanation = load_explanation(scenario, 'deontology')
+            deontology_explanation = deontology_explanation.replace("$", "\\$")
             st.write(deontology_explanation)
             st.session_state["click_sequence"].append([str(datetime.now()), "deontology"])
 
         if st.button("utilitarianism framework"):
             uti_explanation = load_explanation(scenario, 'utilitarianism')
+            uti_explanation = uti_explanation.replace("$", "\\$")
             st.write(uti_explanation)
             st.session_state["click_sequence"].append([str(datetime.now()), "utilitarianism"])
         
         if st.button("virtue ethics framework"):
             virtue_explanation = load_explanation(scenario, 'virtue ethics')
+            virtue_explanation = virtue_explanation.replace("$", "\\$")
             st.write(virtue_explanation)
             st.session_state["click_sequence"].append([str(datetime.now()), "virtue ethics"])
 
         if st.button("care ethics framework"):
             care_explanation = load_explanation(scenario, 'care ethics')
+            care_explanation = care_explanation.replace("$", "\\$")
             st.write(care_explanation)
             st.session_state["click_sequence"].append([str(datetime.now()), "care ethics"])
 
@@ -375,7 +379,7 @@ def condition3(scenario):
             if scenario in scenario_is_donation: 
                 likert_max = 10000
                 likert_min = 0
-                likert_step = 1
+                likert_step = 1000
                 st.write("*Please make sure the sum of your three choices is less than 10000*")
             else:
                 likert_max = 7
