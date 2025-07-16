@@ -1,5 +1,7 @@
 import streamlit as st
 
+hide_sidebar()
+
 st.title("Please answer the following questions based on your experience with the AI decision support aids in the previous questions")
 E1=st.slider("The explanations encouraged me to think critically about my decisions", 1, 7, key="E1")
 E2=st.slider("I considered multiple perspectives before making my decisions", 1, 7, key="E2")

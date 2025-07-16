@@ -13,7 +13,8 @@ def hide_sidebar(set_wide=False):
         <style>
             div[data-testid="stSidebarNav"] {display: none;}
         """
-
+    st.markdown(no_sidebar_style, unsafe_allow_html=True)
+    
 def read_data():
     file_path = "AI_output" + "/dummy.json"
     with open('AI_output/condition1/dummy.json', 'r') as file:

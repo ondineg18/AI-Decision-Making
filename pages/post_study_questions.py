@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 from utils import *
+hide_sidebar()
 
 st.write("## Post-Study Questions")
 

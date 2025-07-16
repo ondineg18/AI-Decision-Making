@@ -3,6 +3,9 @@ from interface_design import *
 # if "question_order" not in st.session_state:
 #     st.session_state["question_order"] = []
 
+
+hide_sidebar(set_wide=True)
+
 scenario_mapping = {
     1: 'condition1',
     2: "condition3",
