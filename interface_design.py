@@ -455,7 +455,7 @@ def condition3(scenario):
                 ["sad", "happy", "angry", "relieved", "scared", "loved", "guilty", "hopeful", "stressed",]
             )
             
-            st.session_state['actions'][scenario+'util'+"C3"] = [emotions_1, emotions_2]
+            st.session_state['actions'][scenario+'care ethics'+"C3"] = [emotions_1, emotions_2]
             if question_type_mapping[scenario]=="slider":
                         
                 emotions_3 = st.multiselect(
