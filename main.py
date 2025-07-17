@@ -65,7 +65,7 @@ if st.button("Submit"):
         st.write(":red[Please fill in all fields]")
     else:
         # st.session_state['PID']=1
-        st.session_state['PID']=get_participant_num() % 6
+        st.session_state['PID']=get_participant_num()
         if st.session_state['PID'] == 0: st.session_state['PID'] = 1
         st.session_state["question_order"]=participants_order[st.session_state['PID']]
         st.session_state['pre_questions']['user_choices'] = user_choices
